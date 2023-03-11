@@ -23,13 +23,17 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'org.postgresql:postgresql'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'org.postgresql:postgresql'
-	annotationProcessor 'org.projectlombok:lombok'
+	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
+	implementation group: 'com.cloudinary', name: 'cloudinary-taglib', version: '1.2.1'
+	implementation group: 'com.cloudinary', name: 'cloudinary-http44', version: '1.21.0'
+
 }
 
 tasks.named('test') {
